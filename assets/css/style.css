@@ -10,9 +10,22 @@ body {
     align-items: center;
 }
 
+.anton-sc-regular {
+    font-family: "Anton SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.marcellus-regular {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 #navbar {
     position: relative;  /* Sätt position relative för att använda z-index */
     z-index: 10;  /* Ge navbaren ett högre värde än hero-texten och footern */
+    font-size: large;
 }
 
 .hero-section {
@@ -28,7 +41,7 @@ body {
     transform: translate(-50%, -50%);  /* Finjustera för exakt centrering */
     text-align: center;  /* Centrerar texten inom hero-text */
     color: white;
-    background-color: rgba(6, 26, 63, 0.514);  /* Transparent svart bakgrund */
+    background-color: rgba(6, 26, 63, 0.61);  /* Transparent svart bakgrund */
     padding: 20px;
     border-radius: 10px;
 }
@@ -81,4 +94,24 @@ footer {
 
 .social-icon:hover {
     color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        padding: 15px;  /* Minska padding för mindre rutor */
+        width: 80%; /* Gör rutan mindre */
+    }
+
+    .hero-text h2 {
+        font-size: 2rem; /* Minska storleken på rubriken */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Minska storleken på paragraftexten */
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Justera knappstorleken */
+        padding: 8px 20px; /* Minska padding på knappen */
+    }
 }

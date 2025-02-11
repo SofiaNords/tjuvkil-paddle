@@ -41,7 +41,7 @@ body {
     transform: translate(-50%, -50%);  /* Finjustera för exakt centrering */
     text-align: center;  /* Centrerar texten inom hero-text */
     color: white;
-    background-color: rgba(6, 26, 63, 0.61);  /* Transparent svart bakgrund */
+    background-color: #475b72d2;  /* Transparent svart bakgrund */
     padding: 20px;
     border-radius: 10px;
 }
@@ -57,12 +57,15 @@ body {
 }
 
 .cta-button {
-    background-color: #007bff;
+    background-color: #AB8095;
     color: white;
     font-size: 1.2rem;
     padding: 10px 30px;
     border-radius: 5px;
     text-decoration: none;
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 footer {
@@ -93,7 +96,7 @@ footer {
 }
 
 .social-icon:hover {
-    color: #007bff;
+    color: #4E9BEC;
 }
 
 @media (max-width: 768px) {

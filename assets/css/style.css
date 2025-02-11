@@ -1,0 +1,84 @@
+body {
+    background-image: url("../images/brattholmen-sup.webp");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar {
+    position: relative;  /* Sätt position relative för att använda z-index */
+    z-index: 10;  /* Ge navbaren ett högre värde än hero-texten och footern */
+}
+
+.hero-section {
+    flex-grow: 1; /* Se till att hero-sektionen växer och fyller utrymmet */
+    position: relative;
+    width: 100%;
+}
+
+.hero-text {
+    position: absolute;  /* Placera texten absolut i förhållande till föräldern */
+    top: 50%;  /* Centrera vertikalt */
+    left: 50%;  /* Centrera horisontellt */
+    transform: translate(-50%, -50%);  /* Finjustera för exakt centrering */
+    text-align: center;  /* Centrerar texten inom hero-text */
+    color: white;
+    background-color: rgba(6, 26, 63, 0.514);  /* Transparent svart bakgrund */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#social-networks {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#social-networks li {
+    margin: 0 10px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}

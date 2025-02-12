@@ -58,7 +58,7 @@ body {
 
 .cta-button {
     background-color: #AB8095;
-    color: white;
+    color: black;
     font-size: 1.2rem;
     padding: 10px 30px;
     border-radius: 5px;
@@ -100,6 +100,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    body {
+        background-image: url("../images/brattholmen-sup-mobile.webp");
+    }
+
     .hero-text {
         padding: 15px;  /* Minska padding för mindre rutor */
         width: 80%; /* Gör rutan mindre */

@@ -9,6 +9,25 @@ body {
     justify-content: flex-start;
 }
 
+.map-container {
+    background-color: #475B72d2;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;  /* Gör containern till en flexbox */
+    justify-content: center;  /* Centrera horisontellt */
+    align-items: center;  /* Centrera vertikalt */
+    height: 500px;  /* Bestäm en höjd för containern */
+    overflow: hidden;  /* För att förhindra att kartan rullar utanför containern */
+}
+
+.map-container iframe {
+    width: 100%;  /* Gör iframe responsiv så den anpassar sig efter containerns bredd */
+    max-width: 100%;  /* Se till att den inte blir större än containern */
+    height: 450px;  /* En fast höjd för kartan, men du kan justera den */
+    border: none;  /* Tar bort ramen från kartan */
+    border-radius: 10px;  /* Ger rundade hörn till iframe */
+}
+
 .product-container {
     background-color: #475B72d2;
     padding: 20px;

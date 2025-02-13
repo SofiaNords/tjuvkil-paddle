@@ -23,7 +23,8 @@
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand h1 marcellus-regular" href="../index.html">Tjuvkil Paddle</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -42,8 +43,37 @@
         </div>
     </nav>
 
-    <!-- Product list -->
+
+    <!-- Product list & Cart-->
     <div class="container product-container mt-5">
+        <!-- Modal för att visa kundvagnen -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Din Kundvagn</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="cartItems" class="list-group">
+                            <!-- Dynamiskt innehåll för kundvagnens produkter kommer här -->
+                        </ul>
+                        <hr>
+                        <p id="totalPrice">Totalt: 0 kr</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
+                        <button type="button" class="btn btn-primary" id="checkoutBtn">Till kassan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Open Cart -->
+        <div class="cart-btn-container">
+            <button id="cartBtn">
+                <i class="bi bi-cart"></i>Cart (<span id="cartCount">0</span>)
+            </button>
+        </div>
         <div class="row" id="product-list"></div>
     </div>
 

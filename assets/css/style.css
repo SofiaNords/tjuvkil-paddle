@@ -15,6 +15,12 @@ body {
     border-radius: 10px;
 }
 
+.cart-btn-container {
+    display: flex;
+    justify-content: center; /* Centrerar horisontellt */
+    align-items: center; /* Centrerar vertikalt */
+    margin-bottom: 10px;
+}
 /* .anton-sc-regular {
     font-family: "Anton SC", serif;
     font-weight: 400;
@@ -64,13 +70,30 @@ body {
     text-decoration: none;
 }
 
-.add-button {
+.bookBtn {
     background-color: #AB8095;
+    color: black;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.add-button {
+    background-color: #4E9BEC;
     color: black;
     font-size: 1.2rem;
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
+}
+
+#cartBtn {
+    background-color: #AB8095;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .card-img-top {

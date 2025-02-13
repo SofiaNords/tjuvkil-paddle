@@ -6,15 +6,20 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-.anton-sc-regular {
+.product-container {
+    background-color: #475B72d2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* .anton-sc-regular {
     font-family: "Anton SC", serif;
     font-weight: 400;
     font-style: normal;
-  }
+  } */
   
 .marcellus-regular {
     font-family: "Marcellus", serif;
@@ -26,12 +31,6 @@ body {
     position: relative;  /* Sätt position relative för att använda z-index */
     z-index: 10;  /* Ge navbaren ett högre värde än hero-texten och footern */
     font-size: large;
-}
-
-.hero-section {
-    flex-grow: 1; /* Se till att hero-sektionen växer och fyller utrymmet */
-    position: relative;
-    width: 100%;
 }
 
 .hero-text {
@@ -56,16 +55,22 @@ body {
     margin-bottom: 30px;
 }
 
-.cta-button {
+.button {
+    background-color: #D8E1EC;
+    color: black;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.add-button {
     background-color: #AB8095;
     color: black;
     font-size: 1.2rem;
-    padding: 10px 30px;
+    padding: 5px;
     border-radius: 5px;
     text-decoration: none;
-    font-family: "Marcellus", serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .card-img-top {
@@ -75,7 +80,6 @@ body {
     padding: 10px;
 }
 
-
 footer {
     width: 100%;
     color: white;
@@ -83,6 +87,7 @@ footer {
     padding: 20px;
     position: relative;
     z-index: 1;
+    margin-top: auto;
 }
 
 #social-networks {

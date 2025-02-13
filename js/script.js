@@ -14,10 +14,10 @@ function displayProducts() {
           <img src="${product.image}" class="card-img-top" alt="${product.name}">
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="openModal(${index})">
-              Se detaljer
+            <button class="button" data-bs-toggle="modal" data-bs-target="#productModal" onclick="openModal(${index})">
+              Details
             </button>
-            <button class="btn btn-success mt-2" onclick="addToCart(${index})">Lägg till i kundvagn</button>
+            <button class="add-button" onclick="addToCart(${index})">Add</button>
           </div>
         </div>
       `;

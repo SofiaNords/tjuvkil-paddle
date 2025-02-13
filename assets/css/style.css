@@ -11,13 +11,9 @@ body {
 
 .map-container {
     background-color: #475B72d2;
+    color: white;
     padding: 20px;
     border-radius: 10px;
-    display: flex;  /* Gör containern till en flexbox */
-    justify-content: center;  /* Centrera horisontellt */
-    align-items: center;  /* Centrera vertikalt */
-    height: 500px;  /* Bestäm en höjd för containern */
-    overflow: hidden;  /* För att förhindra att kartan rullar utanför containern */
 }
 
 .map-container iframe {

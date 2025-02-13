@@ -18,7 +18,6 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
@@ -33,7 +32,7 @@
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/about.html">About</a>
+                        <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/products.html">Kayak & SUP Rental</a>
@@ -43,36 +42,6 @@
         </div>
     </nav>
 
-
-    <!-- Product list & Cart-->
-    <div class="container product-container mt-5">
-        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="cartModalLabel">Din Kundvagn</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul id="cartItems" class="list-group">
-                        </ul>
-                        <hr>
-                        <p id="totalPrice">Totalt: 0 kr</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
-                        <button type="button" class="btn btn-primary" id="checkoutBtn">Till kassan</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cart-btn-container">
-            <button id="cartBtn">
-                <i class="bi bi-cart"></i>Cart (<span id="cartCount">0</span>)
-            </button>
-        </div>
-        <div class="row" id="product-list"></div>
-    </div>
 
     <!-- Footer -->
     <footer>
@@ -105,5 +74,3 @@
     <script src="../js/products.js"></script>
     <script src="../js/script.js"></script>
 </body>
-
-</html>

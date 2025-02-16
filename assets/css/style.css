@@ -124,6 +124,11 @@ body {
     padding: 10px;
 }
 
+#weather{
+    color: white;
+    text-align: center;
+}
+
 footer {
     width: 100%;
     color: white;

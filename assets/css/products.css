@@ -1,0 +1,49 @@
+.product-container {
+    background-color: #475B72d2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    /* Detta ser till att innehållet sprids jämt över hela bredden */
+    align-items: center;
+    padding: 10px 0;
+}
+
+.cart-item-name {
+    flex-grow: 1;
+    /* Gör att produktnamnet får den största platsen */
+    text-align: left;
+    /* Justera namnet till vänster */
+}
+
+.cart-item-quantity,
+.cart-item-price {
+    text-align: center;
+    /* Centrera antalet och priset */
+    width: 100px;
+    /* Ge dem en fast bredd så att de alltid ligger på samma linje */
+}
+
+.remove-btn {
+    margin-left: 10px;
+    /* Lägger till lite avstånd mellan knappen och övriga element */
+}
+
+/* Stil för kvantitetsinput */
+.quantity-input {
+    text-align: center;
+    /* Centrerar texten i input-fältet */
+    max-width: 60px;
+    /* Sätt en maxbredd för att undvika att input-fältet blir för stort */
+}
+

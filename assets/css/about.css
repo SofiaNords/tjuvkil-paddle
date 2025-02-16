@@ -1,0 +1,56 @@
+.map-container {
+    background-color: #475B72d2;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;  /* Gör containern till en flexbox */
+    flex-direction: column;  /* Ställ innehållet i kolumnform */
+    justify-content: flex-start;  /* Centrerar vertikalt */
+    align-items: center;  /* Centrerar horisontellt */
+    text-align: center;  /* Centrerar texten inom containern */
+    height: 100%;  /* Se till att containern sträcker sig hela vägen */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.map-container iframe {
+    width: 100%;  /* Gör iframe responsiv så den anpassar sig efter containerns bredd */
+    max-width: 100%;  /* Se till att den inte blir större än containern */
+    height: 450px;  /* En fast höjd för kartan, men du kan justera den */
+    border: none;  /* Tar bort ramen från kartan */
+    border-radius: 10px;  /* Ger rundade hörn till iframe */
+}
+
+.map-container h2 {
+    max-width: 100%;  /* Se till att rubriken inte överstiger containerbredden */
+    word-wrap: break-word;  /* Gör så att långa ord bryts om de är för stora */
+    hyphens: auto;  /* Lägg till automatiskt bindestreck om ordet är för långt */
+}
+
+
+#mymap {
+    position: relative;
+    width: 100%;  /* Se till att kartan tar upp hela bredden */
+    height: auto;  /* Låt höjden vara auto så att kartan håller proportioner */
+    padding-top: 56.25%;  /* Standardproportioner för 16:9, justera om du vill */
+    overflow: hidden;
+}
+
+#mymap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   /* Gör iframe responsiv så att den täcker hela bredden */
+    height: 100%;  /* Gör så att den tar upp hela höjden av föräldern */
+    border: none;
+}
+
+#mymap img#placeholder-img {
+    position: absolute;  /* Positionera bilden absolut inom #mymap */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Fyll bredden på containern */
+    height: 100%;  /* Fyll höjden på containern */
+    object-fit: cover;  /* Se till att bilden täcker hela området utan att bli förvrängd */
+    border-radius: 10px;  /* Om du vill ha rundade hörn på bilden också */
+}

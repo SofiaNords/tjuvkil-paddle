@@ -50,18 +50,18 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="cartModalLabel">Din Kundvagn</h5>
+                        <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <ul id="cartItems" class="list-group">
                         </ul>
                         <hr>
-                        <p id="totalPrice">Totalt: 0 kr</p>
+                        <p id="totalPrice">Total: 0 kr</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
-                        <button type="button" class="btn btn-primary" id="checkoutBtn">Till kassan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="checkoutBtn">To Checkout</button>
                     </div>
                 </div>
             </div>
@@ -73,6 +73,42 @@
         </div>
         <div id="weather"></div>
         <div class="row" id="product-list"></div>
+    </div>
+
+    <!-- Modal for product details -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="modalImage" class="img-fluid mb-3" alt="Produktbild">
+                    <p id="modalDescription"></p>
+                    <!-- Flexbox container for quantity label, input, and buttons -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <!-- Quantity label and input on the same line -->
+                        <div class="d-flex align-items-center me-2">
+                            <label for="productQuantity" class="form-label mb-0 me-2">Quantity</label>
+                            <input type="number" id="productQuantity" class="form-control" value="1" min="1"
+                                style="width: 80px;">
+                        </div>
+
+                        <!-- Buttons container aligned to the right -->
+                        <div class="ms-auto d-flex">
+                            <!-- Cancel Button -->
+                            <button class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+
+                            <!-- Add to Cart Button -->
+                            <button class="btn btn-primary" id="addToCartModalBtn" onclick="addToCartFromModal()">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->

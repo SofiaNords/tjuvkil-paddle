@@ -8,69 +8,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 }
-
-.map-container {
-    background-color: #475B72d2;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;  /* Gör containern till en flexbox */
-    flex-direction: column;  /* Ställ innehållet i kolumnform */
-    justify-content: center;  /* Centrerar vertikalt */
-    align-items: center;  /* Centrerar horisontellt */
-    text-align: center;  /* Centrerar texten inom containern */
-    height: 100%;  /* Se till att containern sträcker sig hela vägen */
-}
-
-.map-container iframe {
-    width: 100%;  /* Gör iframe responsiv så den anpassar sig efter containerns bredd */
-    max-width: 100%;  /* Se till att den inte blir större än containern */
-    height: 450px;  /* En fast höjd för kartan, men du kan justera den */
-    border: none;  /* Tar bort ramen från kartan */
-    border-radius: 10px;  /* Ger rundade hörn till iframe */
-}
-
-.product-container {
-    background-color: #475B72d2;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.cart-btn-container {
-    display: flex;
-    justify-content: center; /* Centrerar horisontellt */
-    align-items: center; /* Centrerar vertikalt */
-    margin-bottom: 10px;
-}
-
-/* Lägg till följande CSS */
-.cart-item {
-    display: flex;
-    justify-content: space-between;  /* Detta ser till att innehållet sprids jämt över hela bredden */
-    align-items: center;
-    padding: 10px 0;
-  }
-  
-  .cart-item-name {
-    flex-grow: 1; /* Gör att produktnamnet får den största platsen */
-    text-align: left; /* Justera namnet till vänster */
-  }
-  
-  .cart-item-quantity,
-  .cart-item-price {
-    text-align: center; /* Centrera antalet och priset */
-    width: 100px;  /* Ge dem en fast bredd så att de alltid ligger på samma linje */
-  }
-  
-  .remove-btn {
-    margin-left: 10px; /* Lägger till lite avstånd mellan knappen och övriga element */
-  }
-
-  /* Stil för kvantitetsinput */
-.quantity-input {
-    text-align: center; /* Centrerar texten i input-fältet */
-    max-width: 60px; /* Sätt en maxbredd för att undvika att input-fältet blir för stort */
-  }
   
 /* .anton-sc-regular {
     font-family: "Anton SC", serif;
@@ -217,5 +154,9 @@ footer {
     .card-img-top {
         height: 150px;  /* Minska bildens höjd på mindre skärmar */
         object-fit: contain;
+    }
+
+    #mymap iframe {
+        height: 300px;  /* Minska höjden på kartan för mindre skärmar */
     }
 }

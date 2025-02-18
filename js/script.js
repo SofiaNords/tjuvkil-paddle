@@ -42,7 +42,7 @@ displayProducts();
 
 function openModal(index) {
   const product = products[index];
-  
+
   document.getElementById("modalImage").src = product.image;
   document.getElementById("modalDescription").textContent = product.description;
   document.getElementById("productModalLabel").textContent = product.name;
@@ -72,7 +72,7 @@ function addToCart(index) {
 }
 
 
-function updateCart(){
+function updateCart() {
   const cartItemsContainer = document.getElementById("cartItems");
   const cartCount = document.getElementById("cartCount");
   const totalPriceElement = document.getElementById("totalPrice");
@@ -82,17 +82,19 @@ function updateCart(){
   let totalPrice = 0;
   let totalProducts = 0;
 
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
     const cartItemElement = document.createElement("li");
     cartItemElement.classList.add("list-group-item");
 
     cartItemElement.innerHTML = `
       <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex">
-          <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover;" class="me-2">
-          <span>${item.name} - ${item.quantity} x ${item.price} kr</span>
+        <div class="d-flex align-items-center">
+          <span class="cart-item-name">${item.name} - ${item.quantity} x ${item.price} kr</span>
         </div>
-        <span>${item.quantity * item.price} kr</span>
+        <div class="d-flex align-items-center">
+          <span class="cart-item-total-price">${item.quantity * item.price} kr</span>
+          <button class="btn btn-danger btn-sm ms-2" onclick="removeFromCart(${index})">Remove</button>
+        </div>
       </div>
     `;
 
@@ -108,4 +110,10 @@ function updateCart(){
   console.log(totalProducts);
 
   totalPriceElement.textContent = `Total: ${totalPrice} kr`;
+}
+
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
 }

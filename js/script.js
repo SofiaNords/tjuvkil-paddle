@@ -24,10 +24,10 @@ function displayProducts() {
 
             <div class="d-flex">
               <!-- Details Button -->
-              <button class="btn btn-info me-2" data-bs-toggle="modal" data-bs-target="#productModal" onclick="openModal(${index})">Details</button>
+              <button class="btn detailsAndCloseBtn me-2" data-bs-toggle="modal" data-bs-target="#productModal" onclick="openModal(${index})">Details</button>
 
               <!-- Add to Cart Button -->
-              <button class="btn btn-primary" onclick="addToCart(${index})">Add to Cart</button>
+              <button class="btn addAndTocheckoutBtn" onclick="addToCart(${index})">Add</button>
             </div>
           </div>
         </div>

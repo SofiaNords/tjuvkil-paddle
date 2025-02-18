@@ -1,5 +1,7 @@
+let cart = [];
+
 function displayProducts() {
-  const productList = document.getElementById("product-list");
+  const productList = document.getElementById("productList");
 
   products.forEach((product, index) => {
     const productCard = document.createElement("div");
@@ -37,123 +39,73 @@ function displayProducts() {
 
 displayProducts();
 
-let currentProductIndex = null;
 
 function openModal(index) {
   const product = products[index];
   
   document.getElementById("modalImage").src = product.image;
   document.getElementById("modalDescription").textContent = product.description;
-
-  currentProductIndex = index;
-
-  const addToCartModalBtn = document.getElementById("addToCartModalBtn");
-  addToCartModalBtn.style.display = "block";
+  document.getElementById("productModalLabel").textContent = product.name;
 }
 
-
-
-let cart = JSON.parse(localStorage.getItem('cart')) || []; 
-
-const cartBtn = document.getElementById('cartBtn');
-const cartCount = document.getElementById('cartCount');
-const cartItems = document.getElementById('cartItems');
-const totalPriceElement = document.getElementById('totalPrice');
-const checkoutBtn = document.getElementById('checkoutBtn');
-
-function updateCart() {
-  cartCount.textContent = cart.reduce((total, product) => total + product.quantity, 0);
-
-  cartItems.innerHTML = '';
-  let totalPrice = 0;
-
-  cart.forEach((product, index) => {
-    const li = document.createElement('li');
-    li.classList.add('list-group-item');
-
-    li.innerHTML = `
-      <div class="d-flex justify-content-between align-items-center cart-item">
-        <div class="cart-item-name">${product.name}</div>
-        <div class="cart-item-quantity">
-          <input 
-            type="number" 
-            class="form-control quantity-input" 
-            value="${product.quantity}" 
-            min="1" 
-            onchange="updateQuantity(${index}, this.value)"
-            style="width: 60px;">
-        </div>
-        <div class="cart-item-price">${product.price * product.quantity} kr</div>
-        <button class="btn btn-danger btn-sm remove-btn" onclick="removeFromCart(${index})">Remove</button>
-      </div>
-    `;
-    cartItems.appendChild(li);
-    totalPrice += product.price * product.quantity;
-  });
-
-  totalPriceElement.textContent = `Total: ${totalPrice} kr`;
-
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-function updateQuantity(index, newQuantity) {
-  if (newQuantity < 1) {
-    newQuantity = 1; 
-  }
-  cart[index].quantity = parseInt(newQuantity);
-  updateCart();
-}
 
 function addToCart(index) {
-  const quantityInput = document.getElementById(`productQuantity${index}`);
-  const quantity = parseInt(quantityInput.value, 10); 
   const product = products[index];
+  const quantity = document.getElementById(`productQuantity${index}`).value;
 
-  const existingProductIndex = cart.findIndex(item => item.id === product.id);
+  const cartItem = {
+    name: product.name,
+    image: product.image,
+    price: product.price,
+    quantity: parseInt(quantity),
+  };
 
-  if (existingProductIndex !== -1) {
-    cart[existingProductIndex].quantity += quantity;
+  const existingItemIndex = cart.findIndex(item => item.name === cartItem.name);
+
+  if (existingItemIndex !== -1) {
+    cart[existingItemIndex].quantity += cartItem.quantity;
   } else {
-    cart.push({
-      ...product,
-      quantity: quantity,
-    });
+    cart.push(cartItem);
   }
 
-  updateCart();  
-}
-
-function removeFromCart(index) {
-  cart.splice(index, 1);
   updateCart();
 }
 
-cartBtn.addEventListener('click', () => {
-  const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
-  cartModal.show();
-});
 
-updateCart();
+function updateCart(){
+  const cartItemsContainer = document.getElementById("cartItems");
+  const cartCount = document.getElementById("cartCount");
+  const totalPriceElement = document.getElementById("totalPrice");
 
+  cartItemsContainer.innerHTML = "";
 
-function addToCartFromModal() {
-  if (currentProductIndex !== null) {
-    const product = products[currentProductIndex];
-    
-    const quantity = parseInt(document.getElementById("productQuantity").value);
+  let totalPrice = 0;
+  let totalProducts = 0;
 
-    if (isNaN(quantity) || quantity <= 0) {
-      alert("Please enter a valid quantity.");
-      return;
-    }
+  cart.forEach(item => {
+    const cartItemElement = document.createElement("li");
+    cartItemElement.classList.add("list-group-item");
 
-    for (let i = 0; i < quantity; i++) {
-      cart.push(product);
-    }
+    cartItemElement.innerHTML = `
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+          <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover;" class="me-2">
+          <span>${item.name} - ${item.quantity} x ${item.price} kr</span>
+        </div>
+        <span>${item.quantity * item.price} kr</span>
+      </div>
+    `;
 
-    updateCart();
+    cartItemsContainer.appendChild(cartItemElement);
 
-    const modal = bootstrap.Modal.getInstance(document.getElementById("productModal"));
-    modal.hide();
-  }
+    totalPrice += item.quantity * item.price;
+
+    totalProducts += item.quantity;
+  });
+
+  cartCount.textContent = totalProducts;
+
+  console.log(totalProducts);
+
+  totalPriceElement.textContent = `Total: ${totalPrice} kr`;
 }

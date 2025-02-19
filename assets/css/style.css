@@ -9,11 +9,11 @@ body {
     justify-content: flex-start;
 }
   
-/* .anton-sc-regular {
-    font-family: "Anton SC", serif;
+.grechen-fuemen-regular {
+    font-family: "Grechen Fuemen", serif;
     font-weight: 400;
     font-style: normal;
-  } */
+  }
   
 .marcellus-regular {
     font-family: "Marcellus", serif;
@@ -22,19 +22,19 @@ body {
   }
 
 #navbar {
-    position: relative;  /* Sätt position relative för att använda z-index */
-    z-index: 10;  /* Ge navbaren ett högre värde än hero-texten och footern */
+    position: relative;  
+    z-index: 10;  
     font-size: large;
 }
 
 .hero-text {
-    position: absolute;  /* Placera texten absolut i förhållande till föräldern */
-    top: 50%;  /* Centrera vertikalt */
-    left: 50%;  /* Centrera horisontellt */
-    transform: translate(-50%, -50%);  /* Finjustera för exakt centrering */
-    text-align: center;  /* Centrerar texten inom hero-text */
+    position: absolute;  
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;  
     color: white;
-    background-color: #475b72d2;  /* Transparent svart bakgrund */
+    background-color: #475b72d2; 
     padding: 20px;
     border-radius: 10px;
 }
@@ -78,8 +78,8 @@ body {
 }
 
 .card-img-top {
-    width: 100%;   /* Gör bilden responsiv, fyller upp hela containerbredden */
-    height: 200px; /* Sätt en fast höjd för bilderna */
+    width: 100%;   
+    height: 200px; 
     object-fit: contain;
     padding: 10px;
 }
@@ -127,29 +127,29 @@ footer {
     }
 
     .hero-text {
-        padding: 15px;  /* Minska padding för mindre rutor */
-        width: 80%; /* Gör rutan mindre */
+        padding: 15px;  
+        width: 80%; 
     }
 
     .hero-text h2 {
-        font-size: 2rem; /* Minska storleken på rubriken */
+        font-size: 2rem; 
     }
 
     .hero-text p {
-        font-size: 1rem; /* Minska storleken på paragraftexten */
+        font-size: 1rem; 
     }
 
     .cta-button {
-        font-size: 1rem; /* Justera knappstorleken */
-        padding: 8px 20px; /* Minska padding på knappen */
+        font-size: 1rem; 
+        padding: 8px 20px; 
     }
 
     .card-img-top {
-        height: 150px;  /* Minska bildens höjd på mindre skärmar */
+        height: 150px;  
         object-fit: contain;
     }
 
     #mymap iframe {
-        height: 300px;  /* Minska höjden på kartan för mindre skärmar */
+        height: 300px;  
     }
 }

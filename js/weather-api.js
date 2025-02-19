@@ -9,7 +9,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
     const windSpeed = data.wind.speed;
     const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(); 
     const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(); 
-    document.getElementById('weather').innerHTML = `<h3>Weather in ${city}:</h3>
+    document.getElementById('weather').innerHTML = `<h3 class="grechen-fuemen-regular">Weather in ${city}:</h3>
      <p>Temperature: ${temp.toFixed(1)}°C, Wind Speed: ${windSpeed} m/s</p>
      <p>Sunrise: ${sunrise}, Sunset: ${sunset}</p>
       `;

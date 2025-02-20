@@ -8,9 +8,11 @@ function displayProducts() {
 
     productCard.classList.add("col-md-4", "mb-4");
 
+    const imageSrc = window.innerWidth <= 768 ? product.image_mobile : product.image;
+
     productCard.innerHTML = `
       <div class="card">
-        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+        <img src="${imageSrc}" class="card-img-top" alt="${product.name}">
         <div class="card-body">
           <h5 class="card-title">${product.name}</h5>
           <p class="card-text">${product.price} kr per day</p>
@@ -43,7 +45,9 @@ displayProducts();
 function openModal(index) {
   const product = products[index];
 
-  document.getElementById("modalImage").src = product.image;
+  const modalImage = document.getElementById("modalImage");
+
+  modalImage.src  = window.innerWidth <= 768 ? product.image_mobile : product.image;
   document.getElementById("modalDescription").textContent = product.description;
   document.getElementById("productModalLabel").textContent = product.name;
 }

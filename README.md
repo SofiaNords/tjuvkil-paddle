@@ -49,3 +49,13 @@ This project was developed as a prototype to meet the requirements for a school 
 - [OpenWeather API](https://openweathermap.org/) - Used to fetch real-time weather data for Tjuvkil Harbor, enhancing the user experience with weather forecasts.
 - [Visual Studio Code](https://code.visualstudio.com/) - Used as the IDE for development.
 - [Tinify](https://tinypng.com/) - Used to convert and reduce the size of images.
+
+
+## Lighthouse
+
+![LH](./assets/images/lighthouse-index-desktop.png)
+![LH](./assets/images/lighthouse-index-mobile.png)
+![LH](./assets/images/lighthouse-about-desktop.png)
+![LH](./assets/images/lighthouse-about-mobile.png)
+![LH](./assets/images/lighthouse-products-desktop.png)
+![LH](./assets/images/lighthouse-products-mobile.png)

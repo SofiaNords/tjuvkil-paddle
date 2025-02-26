@@ -19,6 +19,15 @@ This project was developed as a prototype to meet the requirements for a school 
 ### Colors
 ![Color Palette](./assets/images/color-palette-three.png)
 
+### Fonts
+
+#### Marchellus Regular
+![Marchellus Regular](./assets/images/marcellus-regular.png)
+
+
+#### Grechen Fuemen
+![Grechen Fuemen](./assets/images/grechen-fuemen.png)
+
 ## Technologies Used
 
 ### Languages Used
